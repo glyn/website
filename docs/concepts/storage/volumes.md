@@ -211,6 +211,7 @@ Note that this path is derived from the volume's `mountPath` and the `path`
 keyed with `log_level`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Important:** You must create a [ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) before you can use it.
 {: .caution}
 
@@ -250,6 +251,12 @@ A CSI persistent volume has the following fields for users to specify:
 - `readOnly`: An optional boolean value indicating whether the volume is to be
   published as read only. Default is false.
 =======
+||||||| merged common ancestors
+=======
+**Important:** You must create a [ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) before you can use it.
+{: .caution}
+
+>>>>>>> master
 **Note:** A container using a ConfigMap as a [subPath](#using-subpath) volume mount will not
 receive ConfigMap updates.
 {: .note}

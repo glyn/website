@@ -1,6 +1,7 @@
 ---
 <<<<<<< HEAD
 reviewers:
+<<<<<<< HEAD
 ||||||| merged common ancestors
 approvers:
 - crassirostris
@@ -8,6 +9,10 @@ approvers:
 reviewers:
 - crassirostris
 >>>>>>> merge master to 1.10, with fixes (#7682)
+||||||| merged common ancestors
+- crassirostris
+=======
+>>>>>>> master
 - piosz
 - x13n
 title: Logging Using Stackdriver

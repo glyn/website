@@ -64,6 +64,7 @@ spec:
   containers:
 <<<<<<< HEAD
     - name: demo-container-1
+<<<<<<< HEAD
       image: k8s.gcr.io/pause:2.0
 ||||||| merged common ancestors
     -
@@ -73,6 +74,11 @@ spec:
     - name: demo-container-1
       image: gcr.io/google_containers/pause:2.0
 >>>>>>> 1.10 update (#7151)
+||||||| merged common ancestors
+      image: gcr.io/google_containers/pause:2.0
+=======
+      image: k8s.gcr.io/pause:2.0
+>>>>>>> master
       resources:
         limits:
           vendor-domain/resource: 2 # requesting 2 vendor-domain/resource
@@ -150,6 +156,7 @@ For examples of device plugin implementations, see:
 <<<<<<< HEAD
 * The [RDMA device plugin](https://github.com/hustcat/k8s-rdma-device-plugin)
 * The [Solarflare device plugin](https://github.com/vikaschoudhary16/sfc-device-plugin)
+<<<<<<< HEAD
 * The [AMD GPU device plugin](https://github.com/RadeonOpenCompute/k8s-device-plugin)
 ||||||| merged common ancestors
 
@@ -157,6 +164,10 @@ For examples of device plugin implementations, see:
 * The [RDMA device plugin](https://github.com/hustcat/k8s-rdma-device-plugin)
 
 >>>>>>> merge master to 1.10, with fixes (#7682)
+||||||| merged common ancestors
+=======
+* The [AMD GPU device plugin](https://github.com/RadeonOpenCompute/k8s-device-plugin)
+>>>>>>> master
 {% endcapture %}
 
 {% include templates/concept.md %}

@@ -15,6 +15,7 @@ consume GPUs across different Kubernetes versions and the current limitations.
 plugins](/docs/concepts/cluster-administration/device-plugins).**
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 To enable GPU support through device plugins before 1.10, the `DevicePlugins`
 feature gate has to be explicitly set to true across the system:
 `--feature-gates="DevicePlugins=true"`. This is no longer required starting
@@ -25,6 +26,11 @@ To enable GPU support through device plugins, a special **alpha** feature gate
 `--feature-gates="DevicePlugins=true"`.
 =======
 To enable GPU support through device plugins before 1,10, the `DevicePlugins`
+||||||| merged common ancestors
+To enable GPU support through device plugins before 1,10, the `DevicePlugins`
+=======
+To enable GPU support through device plugins before 1.10, the `DevicePlugins`
+>>>>>>> master
 feature gate has to be explicitly set to true across the system:
 `--feature-gates="DevicePlugins=true"`. This is no longer required starting
 from 1.10.

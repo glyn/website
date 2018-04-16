@@ -135,6 +135,7 @@ The output is similar to this:
 <<<<<<< HEAD
     {"auths":{"yourprivateregistry.com":{"username":"janedoe","password":"xxxxxxxxxxx","email":"jdoe@example.com","auth":"c3R...zE2"}}}
 
+<<<<<<< HEAD
 To understand what is in the `auth` field, convert the base64-encoded data to a readable format:
 ||||||| merged common ancestors
     {"yourprivateregistry.com":{"username":"janedoe","password":"xxxxxxxxxxx","email":"jdoe@example.com","auth":"c3R...zE2"}}
@@ -151,6 +152,17 @@ The output, username and password concatenated with a `:`, is similar to this:
 
     janedoe:xxxxxxxxxxx
 
+||||||| merged common ancestors
+=======
+To understand what is in the `auth` field, convert the base64-encoded data to a readable format:
+
+    echo "c3R...zE2" | base64 -d
+
+The output, username and password concatenated with a `:`, is similar to this:
+
+    janedoe:xxxxxxxxxxx
+
+>>>>>>> master
 Notice that the Secret data contains the authorization token similar to your local `~/.docker/config.json` file.
 
 You have successfully set your Docker credentials as a Secret called `regcred` in the cluster.
@@ -191,6 +203,7 @@ Create a Pod that uses your Secret, and verify that the Pod is running:
 * Learn more about [using a private registry](/docs/concepts/containers/images/#using-a-private-registry).
 * See [kubectl create secret docker-registry](/docs/user-guide/kubectl/{{page.version}}/#-em-secret-docker-registry-em-).
 <<<<<<< HEAD
+<<<<<<< HEAD
 * See [Secret](/docs/reference/generated/kubernetes-api/{{page.version}}/#secret-v1-core).
 * See the `imagePullSecrets` field of [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core).
 ||||||| merged common ancestors
@@ -201,6 +214,13 @@ Create a Pod that uses your Secret, and verify that the Pod is running:
 * See [Secret](/docs/api-reference/{{page.version}}/#secret-v1-core).
 * See the `imagePullSecrets` field of [PodSpec](/docs/api-reference/{{page.version}}/#podspec-v1-core).
 >>>>>>> merge master to 1.10, with fixes (#7682)
+||||||| merged common ancestors
+* See [Secret](/docs/api-reference/{{page.version}}/#secret-v1-core).
+* See the `imagePullSecrets` field of [PodSpec](/docs/api-reference/{{page.version}}/#podspec-v1-core).
+=======
+* See [Secret](/docs/reference/generated/kubernetes-api/{{page.version}}/#secret-v1-core).
+* See the `imagePullSecrets` field of [PodSpec](/docs/reference/generated/kubernetes-api/{{page.version}}/#podspec-v1-core).
+>>>>>>> master
 
 {% endcapture %}
 

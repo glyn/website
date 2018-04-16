@@ -488,12 +488,18 @@ plugins:
 
 #### Configuration Annotation Format
 <<<<<<< HEAD
+<<<<<<< HEAD
 `PodNodeSelector` uses the annotation key `scheduler.alpha.kubernetes.io/node-selector` to assign node selectors to namespaces.
 ||||||| merged common ancestors
 PodNodeSelector uses the annotation key `scheduler.alpha.kubernetes.io/node-selector` to assign node selectors to namespaces.
 =======
 `PodNodeSelector` uses the annotation key `scheduler.kubernetes.io/node-selector` to assign node selectors to namespaces.
 >>>>>>> promote PodNodeSelector to stable; document detailed behavior (#7134)
+||||||| merged common ancestors
+`PodNodeSelector` uses the annotation key `scheduler.kubernetes.io/node-selector` to assign node selectors to namespaces.
+=======
+`PodNodeSelector` uses the annotation key `scheduler.alpha.kubernetes.io/node-selector` to assign node selectors to namespaces.
+>>>>>>> master
 
 ```yaml
 apiVersion: v1
@@ -523,7 +529,7 @@ admission plugin, which allows preventing pods from running on specifically tain
 =======
 #### Internal Behavior
 This admission controller has the following behavior:
-  1. If the `Namespace` has an annotation with a key `scheduler.kubernetes.io/nodeSelector`, use its value as the
+  1. If the `Namespace` has an annotation with a key `scheduler.alpha.kubernetes.io/node-selector`, use its value as the
      node selector.
   1. If the namespace lacks such an annotation, use the `clusterDefaultNodeSelector` defined in the `PodNodeSelector`
      plugin configuration file as the node selector.
@@ -531,7 +537,8 @@ This admission controller has the following behavior:
   1. Evaluate the pod's node selector against the namespace-specific whitelist defined the plugin configuration file.
      Conflicts result in rejection.
 
-**Note:** `PodTolerationRestriction` is more versatile and powerful than `PodNodeSelector` and can encompass the scenarios supported by `PodNodeSelector`.
+**Note:** PodNodeSelector allows forcing pods to run on specifically labeled nodes. Also see the PodTolerationRestriction 
+admission plugin, which allows preventing pods from running on specifically tainted nodes.
 {: .note}
 
 >>>>>>> promote PodNodeSelector to stable; document detailed behavior (#7134)

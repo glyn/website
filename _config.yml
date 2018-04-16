@@ -16,6 +16,7 @@ lsi: false
 <<<<<<< HEAD
 <<<<<<< HEAD
 latest: "v1.10"
+<<<<<<< HEAD
 
 paginate: 7
 paginate_path: "/blog/page:num/"
@@ -29,6 +30,13 @@ latest: "v1.9"
 =======
 latest: "v1.10"
 >>>>>>> update overridden config for 1.10 (#7847)
+||||||| merged common ancestors
+=======
+
+paginate: 7
+paginate_path: "/blog/page:num/"
+
+>>>>>>> master
 defaults:
   -
     scope:

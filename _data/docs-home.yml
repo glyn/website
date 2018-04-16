@@ -20,11 +20,16 @@ toc:
   - docs/home/contribute/includes.md
 <<<<<<< HEAD
   - docs/home/contribute/localization.md
+<<<<<<< HEAD
   - docs/home/contribute/blog-post.md
 ||||||| merged common ancestors
 =======
   - docs/home/contribute/localization.md
 >>>>>>> merge master to 1.10, with fixes (#7682)
+||||||| merged common ancestors
+=======
+  - docs/home/contribute/blog-post.md
+>>>>>>> master
 
   - title: Updating Automatically Generated Reference Pages
     section:

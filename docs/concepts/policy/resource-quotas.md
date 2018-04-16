@@ -289,15 +289,17 @@ requests.memory        0    1Gi
 $ kubectl describe quota object-counts --namespace=myspace
 =======
 kubectl describe quota compute-resources --namespace=myspace
-Name:                  compute-resources
-Namespace:             myspace
-Resource               Used Hard
---------               ---- ----
-limits.cpu             0    2
-limits.memory          0    2Gi
-pods                   0    4
-requests.cpu           0    1
-requests.memory        0    1Gi
+Name:                    compute-resources
+Namespace:               myspace
+Resource                 Used  Hard
+--------                 ----  ----
+limits.cpu               0     2
+limits.memory            0     2Gi
+pods                     0     4
+requests.cpu             0     1
+requests.memory          0     1Gi
+requests.nvidia.com/gpu  0     4
+
 
 kubectl describe quota object-counts --namespace=myspace
 >>>>>>> merge master to 1.10, with fixes (#7682)

@@ -34,6 +34,7 @@ toc:
 - title: API Reference
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   landing_page: /docs/reference/generated/kubernetes-api/v1.10/
 ||||||| merged common ancestors
 =======
@@ -44,6 +45,11 @@ toc:
 =======
   landing_page: /docs/api-reference/v1.10/
 >>>>>>> update generated api-reference docs for 1.10 (#7856)
+||||||| merged common ancestors
+  landing_page: /docs/api-reference/v1.10/
+=======
+  landing_page: /docs/reference/generated/kubernetes-api/v1.10/
+>>>>>>> master
   section:
   - title: v1.10
     path: /docs/reference/generated/kubernetes-api/v1.10/

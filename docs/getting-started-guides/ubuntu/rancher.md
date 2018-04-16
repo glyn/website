@@ -423,7 +423,7 @@ rules:
   verbs:
   - '*'
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
@@ -435,6 +435,7 @@ spec:
   selector:
     matchLabels:
       app: rancher
+      ima: pod
   strategy: {}
   template:
     metadata:
@@ -584,7 +585,7 @@ rules:
   verbs:
   - '*'
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null

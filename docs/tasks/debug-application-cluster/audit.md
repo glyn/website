@@ -26,6 +26,7 @@ answer the following questions:
 
 [Kube-apiserver][kube-apiserver] performs auditing. Each request on each stage
 of its execution generates an event, which is then pre-processed according to
+<<<<<<< HEAD
 a certain policy and written to a backend. The policy determines what's recorded
 and the backends persist the records. The current backend implementations
 include logs files and webhooks.
@@ -50,6 +51,35 @@ Additionally, memory consumption depends on the audit logging configuration.
 **Note,** that audit logging feature increases apiserver memory consumption, since some context
 required for auditing is stored for each request. Additionally, memory consumption depends on the
 audit logging configuration.
+||||||| merged common ancestors
+a certain policy and written to a backend. You can find more details about the
+pipeline in the [design proposal][auditing-proposal].
+
+**Note,** that audit logging feature increases apiserver memory consumption, since some context
+required for auditing is stored for each request. Additionally, memory consumption depends on the
+audit logging configuration.
+=======
+a certain policy and written to a backend. The policy determines what's recorded
+and the backends persist the records. The current backend implementations
+include logs files and webhooks.
+
+Each request can be recorded with an associated "stage". The known stages are:
+
+- `RequestReceived` - The stage for events generated as soon as the audit
+  handler receives the request, and before it is delegated down the handler
+  chain.
+- `ResponseStarted` - Once the response headers are sent, but before the
+  response body is sent. This stage is only generated for long-running requests
+  (e.g. watch).
+- `ResponseComplete` - The response body has been completed and no more bytes
+  will be sent.
+- `Panic` - Events generated when a panic occurred.
+
+**Note** The audit logging feature increases the memory consumption of the API
+server because some context required for auditing is stored for each request.
+Additionally, memory consumption depends on the audit logging configuration.
+{: .note}
+>>>>>>> master
 
 ## Audit Policy
 
@@ -400,6 +430,7 @@ plugin which supports full-text search and analytics.
 ## Legacy Audit
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 __Note:__ Legacy Audit is deprecated and is disabled by default since 1.8 and 
 will be removed in 1.12. To fallback to this legacy audit, disable the advanced
 auditing feature using the `AdvancedAuditing` feature gate in [kube-apiserver][kube-apiserver]:
@@ -412,6 +443,15 @@ __Note:__ Legacy Audit is deprecated and is disabled by default since Kubernetes
 will be removed in 1.12. To fallback to this legacy audit, disable the advanced auditing feature
 using the `AdvancedAuditing` feature gate in [kube-apiserver][kube-apiserver]:
 >>>>>>> Update Audit Logging documentation for 1.10 (#7679)
+||||||| merged common ancestors
+__Note:__ Legacy Audit is deprecated and is disabled by default since Kubernetes 1.8. Legacy Audit
+will be removed in 1.12. To fallback to this legacy audit, disable the advanced auditing feature
+using the `AdvancedAuditing` feature gate in [kube-apiserver][kube-apiserver]:
+=======
+__Note:__ Legacy Audit is deprecated and is disabled by default since 1.8 and 
+will be removed in 1.12. To fallback to this legacy audit, disable the advanced
+auditing feature using the `AdvancedAuditing` feature gate in [kube-apiserver][kube-apiserver]:
+>>>>>>> master
 
 ```
 --feature-gates=AdvancedAuditing=false
